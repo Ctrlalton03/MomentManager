@@ -8,15 +8,18 @@ function showSidebar() {
           sidebar.style.display = "flex";
         }
   
-        function hideSidebar() {
+function hideSidebar() {
           const sidebar = document.querySelector(".sidebar");
           sidebar.style.display = "none";
         }
 
- 
-function startButton(){
-    window.location.href = "signup.html";
-}
+
+document.getElementById("GetStartedButton").addEventListener("click", function() {
+  window.location.href = "To-Do-List.html";
+});
+
+
+
 let swiperCards = new Swiper('.card--content', {
     loop: true,
     spaceBetween: 32,

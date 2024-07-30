@@ -386,4 +386,36 @@ button:hover{
 }
 
 
-/*
+/*tablet breakpoint*/
+@media screen and (min-width: 768px){
+    .hideOnMobile{
+        display: block;
+    }
+    .sidebar{
+        display: none;
+    }
+    nav li{
+        height: 100px;
+    }
+    .menu-button{
+        display: none;
+    }
+    
+    #MainHeader{
+        font-size: 80px;
+    }
+    #mobileDescription{
+        display: none;
+    }
+    #DesktopDescription{
+        display: block;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        font-family: "monsterrat-italic";
+        font-size: 1.2rem;
+        color: white;
+        width: 70%;
+        text-align: center;
+    }
+
+}

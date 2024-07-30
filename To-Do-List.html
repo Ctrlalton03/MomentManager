@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="To-Do-List.css">
 </head>
 <body>
     <section>
@@ -48,21 +48,40 @@
               </li>
             </ul>
         </nav>
+        <div class="taskcontainer">
+          <div class="UserToDoListContainer">
+          <div class="checked-container">
+            <div class="task-details">
+              <h1>Daily Tasks</h1>
+              <p> Keep Up the Good Work</p>
+              <div id="progressBar">
+                <div id="progress"></div>
+              </div>
 
-        <div class="SignUpContainer">
-            <h1>Sign Up</h1>
-            <form action="signup.php" method="post">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-            <p>Already have an account? <a href="login.html">Log in</a></p>
-    
+            </div>
+            <div class="task-number">
+              <p id="numbers">
+                0 / 0
+              </p>
+            </div>
+          </div>
+
+
+          <form>
+            <input type="text" id="task" placeholder="Add a Task">
+            <button type="submit" id="addTask">+</button>
+          </form>
+
+
+          <ul id="task-list" class="task-list">
+
+          </ul>
+
         </div>
+        </div>
+        
     </section>
    
-    <script src="script.js"></script>
+    <script src="js/Todo.js"></script>
 </body>
 </html>
