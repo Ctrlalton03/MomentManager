@@ -270,7 +270,6 @@ button:hover{
 }
 
 .FakeUserheader{
-    border: 1px solid red;
     width: 100%;
     height: 10vh;
     display: flex;
@@ -309,7 +308,6 @@ button:hover{
 .card__container{
     height: 80%;
     width: 100%;
-    border: 3px solid red;
     padding-block: 5rem;
     overflow: hidden;
     display: flex;
@@ -322,16 +320,15 @@ button:hover{
     margin-inline: 1.75rem;
     border-radius: 1.25rem ;
     overflow: hidden;
-    border: 1px solid blue;
     width: 80%;
-    height: 50%;
+    height: 60%;
     display: flex;
     justify-content: center;
 }
 
 .card__article{
     width: 300px;
-    
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     overflow: hidden;
     border-radius: 1.25rem;
     
@@ -349,6 +346,7 @@ button:hover{
     text-align: center;
     padding: 10px;
     background-color: #4a4a4a;
+    
     height: 60%;
 
 }
@@ -356,27 +354,25 @@ button:hover{
 
 .card__data p{
     font-family: "raleway";
-    font-size: 1.05rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
-    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
 }
 .card__data h3{
     font-family: "monsterrat-italic";
-    font-size: 1.25rem;
     font-weight: 500;
     color: rgb(255, 255, 255);
 }
 
 .card__title{
-
+    
     width: 300px;
 }
 
 .card__text{
-    
     height: 80%;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
     
 }
@@ -388,3 +384,6 @@ button:hover{
 .swiper-button-next:after{
     color: white;
 }
+
+
+/*
