@@ -4,23 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>To-do List</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    
+    <title>Moment-Manager</title>
 </head>
 <body>
-    <div class="container">
-       <div class="todo-app">
-        <h2>To-do List <img src="images/icon.png"></h2>
-        <div class="row">
-            <input type="text" id="input-box" 
-            placeholder="Add a task">
-            <button onclick="addTask()">Add</button>
+    <section>
+        <div id="container">
+            <nav>
+                <ul class="sidebar">
+                  <li onclick="hideSidebar()">
+                    <a
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="40"
+                        viewBox="0 -960 960 960"
+                        width="34"
+                      >
+                        <path
+                          d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                        /></svg></a>
+                  </li>
+                  <li><a href="Index.html">Home</a></li>
+                  <li><a href="ComparePackages.html">Packages</a></li>
+                  <li><a href="ContactUs.html">Contact Us</a></li>
+                  <li><a href="AboutUs.html">About Us</a></li>
+                </ul>
+                <ul>
+                  <li><a>Moment <br> Manager</a></li>
+                  <li class="hideOnMobile"><a href="Index.html">Home</a></li>
+                  <li class="hideOnMobile">
+                    <a href="ComparePackages.html">Packages</a>
+                  </li>
+                  <li class="hideOnMobile"><a href="ContactUs.html">Contact Us</a></li>
+                  <li class="hideOnMobile"><a href="#">About Us</a></li>
+                  <li class="menu-button"onclick="showSidebar()">
+                    <a
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="40"
+                        viewBox="0 -960 960 960"
+                        width="34"
+                      >
+                        <path
+                          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+                  </li>
+                </ul>
+            </nav>
+            <div class="Content-wrapper">
+                <h1 id="MainHeader">Moment Manager</h1>
+                <p id="mobileDescription">Welcome to Moment Manager, 
+                    the simple and smart way to schedule events and 
+                    manage your calendar. Effortlessly organize your plans,
+                    set reminders, and share your schedule, all in one place. 
+                    Stay on top of your time with ease!</p>
+                <p id="DesktopDescription">Welcome to Moment Manager, your ultimate 
+                    tool for effortlessly scheduling events and managing your calendar. 
+                    Whether you're organizing a family gathering, coordinating a work 
+                    project, or planning a social event, Moment Manager streamlines 
+                    the process with its intuitive interface and smart features. Keep 
+                    track of important dates, set reminders, and share your schedule 
+                    with ease, all from one centralized platform. Embrace simplicity 
+                    and stay on top of your plans with Moment Manager, where every
+                    moment counts.</p>
+                    <button id="GetStartedButton" onclick="startButton()">Get Started</button>
+                    <button id="LearnMoreButton">Learn More</button>
+
+
+            </div>
+            
         </div>
-        <ul id="list-container">
-            <!-- <li class="checked">Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li> -->
-        </ul>
-       </div>
-       <script src="script.js"></script> 
+    </section>
+    <section id="FeatureContainer">
+        <div class="featureWrapper">
+            <h1>Features</h1>
+            <div class="feature">
+                <div>
+                    <img src="images/calendar.gif" alt="calendar icon">
+                    <h3>Calendar</h3>
+                </div>
+               
+                <p>Create, edit, and manage events with support for recurring 
+                    events and customizable reminders.</p>
+            </div>
+            <div class="feature">
+                <div>
+                    <img src="images/notification.gif" alt="reminder icon">
+                    <h3>Reminders</h3>
+                </div>
+                
+                <p>Offer customizable reminders and notifications via email, 
+                    SMS, or in-app alerts to keep users on track.</p>
+            </div>
+            <div class="feature">
+                <div>
+                    <img src="images/share.gif" alt="share icon">
+                    <h3>Share</h3>
+                </div>
+                <p>Share your schedule with friends, family, or colleagues to 
+                    coordinate plans with ease.</p>
+            </div>
+            <div class="feature">
+                <div>
+                    <img src="images/touch-screen.gif" alt="notes icon">
+                    <h3>Mobile <br>Access</h3>
+                </div>
+                <p>Take notes, jot down ideas, and keep track of important 
+                    details all in one place.</p>
+            </div>
+            <div class="feature">
+                <div>
+                    <img src="images/settings.gif" alt="settings icon">
+                    <h3>Settings</h3>
+                </div>
+                <p>Customize your preferences, set up recurring events, and 
+                    manage your account settings with ease.</p>
+        </div>
+    </section>
+    <section id="TestimonalsContainer">
+
+        <div class="card__container swiper">
+            <div class="card--content">
+                <div class="swiper-wrapper">
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="images/Ava1.png" alt="" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+
+                        <div class="card__data">
+                            <h3 class="card__title">Jane D., Marketing Manager</h3>
+                            <p class="card__text">
+                                "I've been using Moment Manager for a few weeks 
+                                now, and it's truly a game-changer! It helps me 
+                                organize my tasks and manage my time efficiently. 
+                                The interface is user-friendly, and the reminders 
+                                keep me on track. Highly recommended for anyone 
+                                looking to boost productivity!"
+                            </p>
+                        </div>
+                    </article>
+                    <!--Card 2-->
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="images/Ava2.png" alt="" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+
+                        <div class="card__data">
+                            <h3 class="card__title">Mark S., Freelance Designer</h3>
+                            <p class="card__text">
+                                "Moment Manager has revolutionized how I manage my daily schedule. 
+                                The app's features are intuitive and easy to use, and the 
+                                customizable alerts ensure I never miss an important 
+                                deadline. It's perfect for both personal and professional use."
+                            </p>
+                        </div>
+                    </article>
+                    <!--Card 3-->
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="images/Ava3.png" alt="" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+
+                        <div class="card__data">
+                            <h3 class="card__title">Kevin R., Software Engineer</h3>
+                            <p class="card__text">
+                                "Moment Manager is fantastic! The task prioritization feature 
+                                has helped me manage my workload more effectively. The app 
+                                is also visually appealing, making it enjoyable to use every 
+                                day. I can't imagine my life without it now."
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                
+                
+            </div>
+            <div class="swiper-button-next">
+                
+            </div>
+            <div class="swiper-button-prev">
+                
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+    </section>
+
+
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
