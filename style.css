@@ -101,12 +101,14 @@ nav{
 }
 
 .menu-button{
+    
     cursor: pointer;
   display:block ;
 }
 
 
 .sidebar{
+    
   display: hidden;
 }
 
@@ -257,13 +259,31 @@ button:hover{
 
 /* Testimonial Section */
 #TestimonalsContainer{
-    display: flex;
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 100vh;
             background-color: #171717;
             overflow: hidden;
+}
+
+.FakeUserheader{
+    border: 1px solid red;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FakeUserheader h1{
+    font-family: "raleway-italic";
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    
 }
 
 
@@ -287,12 +307,13 @@ button:hover{
 }
 
 .card__container{
-    height: 100%;
+    height: 80%;
     width: 100%;
- 
+    border: 3px solid red;
     padding-block: 5rem;
     overflow: hidden;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -301,11 +322,11 @@ button:hover{
     margin-inline: 1.75rem;
     border-radius: 1.25rem ;
     overflow: hidden;
-  
-    width: 100%;
+    border: 1px solid blue;
+    width: 80%;
     height: 50%;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .card__article{
