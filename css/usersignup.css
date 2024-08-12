@@ -115,12 +115,26 @@
     display: flex;
     flex-direction: column;
 }
+.inputContainer span {
+    display: block; /* Ensure the span takes up space */
+    margin-top: 5px; /* Space between the input and error message */
+    font-size: 12px; /* Adjust as needed */
+}
+
+.inputContainer.error span {
+    color: red; /* Error message color */
+}
+
+.inputContainer.success span {
+    color: green; /* Success message color */
+}
 
 .inputContainer.error input {
-    border-color: red; 
+    border-color: red; /* Change border color of input */
 }
+
 .inputContainer.success input {
-    border-color: green; 
+    border-color: green; /* Change border color of input */
 }
 
 

@@ -59,7 +59,8 @@ function setErrorFor(input, message) {
     let inputContainer = input.parentElement;
     let span = inputContainer.querySelector("span");
     span.innerText = message;
-    inputContainer.classList.add() = "error";
+    inputContainer.classList.add("error");
+    inputContainer.classList.remove("success");
     
 
     
@@ -69,14 +70,15 @@ function setSuccessFor(input){
     let inputContainer = input.parentElement;
     let span = inputContainer.querySelector("span");
     span.innerText = "";
-    inputContainer.classList.add() = "success";
+    inputContainer.classList.add("success");
+    inputContainer.classList.remove("error");
     
 }
 
 
 
 function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 }
 
 
