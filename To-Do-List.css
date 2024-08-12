@@ -241,7 +241,7 @@ button{
     gap: 10px;
     width: 100%;
     list-style: none;
-
+    color: white;
 }
 .taskItem{
     display: flex;
@@ -274,4 +274,8 @@ button{
 .task.completed{
     text-decoration: line-through;
     color: #ffffff;
+}
+
+.icons img{
+    color: white;
 }

@@ -15,7 +15,7 @@ function hideSidebar() {
 
 
 document.getElementById("GetStartedButton").addEventListener("click", function() {
-  window.location.href = "To-Do-List.html";
+  window.location.href = "signupuser.html";
 });
 
 
