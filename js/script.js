@@ -18,6 +18,10 @@ document.getElementById("GetStartedButton").addEventListener("click", function()
   window.location.href = "signupuser.html";
 });
 
+function loginButton(){
+  window.location.href = "signin.html";
+}
+
 
 
 let swiperCards = new Swiper('.card--content', {

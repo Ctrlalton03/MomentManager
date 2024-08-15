@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="headerArea">
+            <h1><a href="index.html">Moment <br>Manager</a></h1>
+        </div>
+        <div class="dashboardContainer">
+            <!--Welcome the user-->
+            <div class="dashboard-header">
+                <h1 id="userWelcome"></h1>
+                
+            </div>
+            <!--Break-->
+            <div class="blueline"></div>
+
+            <!--Dashboard Container-->
+            <h1 id="DashboardMessage">Today's Progress</h1>
+            <div class="task-container">
+                <div class="task">
+                    <div class="task-date">2024-08-12</div>
+                    <div class="task-name">Task 1</div>
+                </div>
+                <div class="task">
+                    <div class="task-date">2024-08-13</div>
+                    <div class="task-name">Task 2</div>
+                </div>
+                <div class="task">
+                    <div class="task-date">2024-08-14</div>
+                    <div class="task-name">Task 3</div>
+                </div>
+            </div>
+            
+            <div class="Subheaderbtns">
+                <div class="btncontainer">
+                    <a href="addtask.html" class="btn">Add <br>Task</a>
+                </div>
+                <div class="btncontainer">
+                    <a href="notetaking.html" class="btn">Note <br>Taking</a>
+                </div>
+                <div class="btncontainer">
+                    <a href="viewcalender.html" class="btn">View<br> Calender</a>
+                </div>
+
+            </div>
+            
+
+            <div class="upcoming-taskscontainer">
+                <h1>Upcoming Event</h1>
+                <br>
+                <div class="weeklytaskcontainer">
+                    <div class="Upcoming-task">
+                        <div class="input-group">
+                            <label for="task-title">Event Title</label>
+                            <input type="text" id="task-title" name="task-title">
+                        </div>
+                        <div class="input-group">
+                            <label for="task-location">Location</label>
+                            <input type="text" id="task-location" name="task-location" >
+                        </div>
+                        <div class="input-group">
+                            <label for="task-date">Date</label>
+                            <input type="date" id="task-date" name="task-date">
+                        </div>
+                        <div class="input-group">
+                            <label for="task-details">Details</label>
+                            <textarea id="task-details" name="task-details" ></textarea>
+                        </div>
+                    </div>
+                    <div class="Upcoming-task">
+                        <div class="input-group">
+                            <label for="task-title">Event Title</label>
+                            <input type="text" id="task-title" name="task-title">
+                        </div>
+                        <div class="input-group">
+                            <label for="task-location">Location</label>
+                            <input type="text" id="task-location" name="task-location" >
+                        </div>
+                        <div class="input-group">
+                            <label for="task-date">Date</label>
+                            <input type="date" id="task-date" name="task-date">
+                        </div>
+                        <div class="input-group">
+                            <label for="task-details">Details</label>
+                            <textarea id="task-details" name="task-details" ></textarea>
+                        </div>
+                    </div>
+                    <div class="Upcoming-task">
+                        <div class="input-group">
+                            <label for="task-title">Event Title</label>
+                            <input type="text" id="task-title" name="task-title">
+                        </div>
+                        <div class="input-group">
+                            <label for="task-location">Location</label>
+                            <input type="text" id="task-location" name="task-location" >
+                        </div>
+                        <div class="input-group">
+                            <label for="task-date">Date</label>
+                            <input type="date" id="task-date" name="task-date">
+                        </div>
+                        <div class="input-group">
+                            <label for="task-details">Details</label>
+                            <textarea id="task-details" name="task-details" ></textarea>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <script src="js/Dashboard.js"></script>
+</body>
+</html>

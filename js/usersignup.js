@@ -6,9 +6,26 @@ let confirmPassword = document.getElementById("ConfirmPassword");
 let username = document.getElementById("Username");
 
     form.addEventListener('submit', function(event) {
-        // Prevent form from submitting
-        event.preventDefault();
+        event.preventDefault();// Prevent form from submitting
+
+
+
+
         checkInputs();
+
+        let username = document.getElementById('Username').value.trim(); 
+        let password = document.getElementById('password').value.trim();
+
+        if (username && password){
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+            alert("Account created successfully");
+            window.location.href = 'dashboard.html';
+        }
+        else{
+            alert("Please fill in the required fields");
+        }
+
     });
 
 
@@ -80,5 +97,9 @@ function setSuccessFor(input){
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 }
+
+
+
+    
 
 

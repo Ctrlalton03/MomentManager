@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "raleway-italic";
+    src: url(fonts/Raleway-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "monsterrat-italic";
+    src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(fonts/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "monsterrat";
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #171717;
+}
+
+.headerArea{
+font-family: 'raleway-italic';   
+width: 100%;
+font-size: 8px;
+color: #3299F5;
+padding: 10px;
+text-shadow: 0px 0px 10px #329af582;
+
+}
+
+.headerArea h1 a{
+    text-decoration: none;
+    color: #3299F5;
+}
+
+.dashboardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard-header{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.dashboard-header h1{
+    width: 90%;
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+.blueline{
+    width: 100%;
+    height: 5px;
+    background: rgb(50,153,245);
+    
+}
+
+#DashboardMessage{
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+
+.task-container{
+    background-color: #3299F5;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    height: 11.1vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgb(0, 123, 255) 0px 10px 40px -20px;
+}
+
+.task{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3299F5;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    color: white;
+    font-family: "raleway";
+}
+
+.task-date{
+    font-family: 'raleway-italic';
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+.task-name{
+    font-family: 'Raleway';
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.task.active{
+    top: 0;
+    transform: translateY(0);
+}
+
+.task:not(.active) {
+    transform: translateY(100%);
+}
+
+.Subheaderbtns{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 15%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.btncontainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 30%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.btncontainer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #3299F5;
+    font-family: "monsterrat";
+    font-size: 1rem;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+}
+
+.upcoming-taskscontainer{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+.upcoming-taskscontainer h1{
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.weeklytaskcontainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 80%;
+    max-width: 600px;
+    gap: 15px;
+    }
+
+.Upcoming-task{
+    background-color: #3299F5;
+    border-radius: 8px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+
+
+.input-group{
+    width: 100%;
+}
+
+.input-group label{
+    font-family: 'Raleway';
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+}
+
+
+.input-group input{
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+    border: 1px solid #3299F5;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.input-group textarea{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #3299F5;
+    padding: 10px;
+    background-color: transparent;
+}
+
