@@ -1,65 +1,67 @@
 let form = document.getElementById("form");
 
-
-
-
-
-
 form.addEventListener('submit', function(event) {
     event.preventDefault();// Prevent form from submitting
+
 
 
 
     checkInputs();
 });
 
-
 function checkInputs() {
-    let username = document.getElementById('UsernameInput').value.trim(); 
-    let password = document.getElementById('PasswordInput').value.trim();
+    const usernameInput = document.getElementById('UsernameInput');
+    const passwordInput = document.getElementById('PasswordInput');
 
+    //grab the correct username from the local storage
     let storedUsername = localStorage.getItem('username');
-    let storedPassword = localStorage.getItem('password');
+    let isValid= true;
 
-    if (username === "") {
-        setErrorFor(username, "Username cannot be blank");
-    } 
-    else if (username !== storedUsername){
-        setErrorFor(username, "Username does not exist");
+    //validate the username
+    if(usernameInput.value.trim() === '') {
+        isValid = false;
+        setErrorFor(usernameInput, "Username cannot be blank");
     }
-    else {
-        setSuccessFor(username);
+    else if(usernameInput.value !== storedUsername) {
+        isValid = false;
+        setErrorFor(usernameInput, "Username is incorrect");
+    } else {
+        setSuccessFor(usernameInput);
     }
 
-
-    //password validation
-    if (password === "") {
-        setErrorFor(password, "Password cannot be blank");
-    } 
-    else if (password !== storedPassword){
-        setErrorFor(password, "Password is incorrect");
+    //validate the password
+    if(passwordInput.value.trim() === '') {
+        isValid = false;
+        setErrorFor(passwordInput, "Password cannot be blank");
+    } else if(passwordInput.value !== localStorage.getItem('password')) {
+        isValid = false;
+        setErrorFor(passwordInput, "Password is incorrect");
+    } else {
+        setSuccessFor(passwordInput);
     }
-    else {
-        setSuccessFor(password);
-}
-}
+
+    //if the username and password are correct, and everything is 
+    //valid then submit the form and redirect to the dashboard
+    if(isValid){
+        window.location.href = 'dashboard.html';
+    }
+};
+
 
 function setErrorFor(input, message) {
     let inputContainer = input.parentElement;
-    let span = document.getElementsByClassName("error");
+    let span = inputContainer.querySelector("span");
     span.innerText = message;
-    inputContainer.classList.add("errormessage");
+    inputContainerContainer.classList.add("error");
     inputContainer.classList.remove("success");
-    
-
-    
+    input.style.borderColor = "red";
 }
 
-function setSuccessFor(input){
+function setSuccessFor(input) {
     let inputContainer = input.parentElement;
     let span = inputContainer.querySelector("span");
     span.innerText = "";
     inputContainer.classList.add("success");
-    inputContainer.classList.remove("errormessage");
-    
+    inputContainer.classList.remove("error");
+    input.style.borderColor = "";
 }

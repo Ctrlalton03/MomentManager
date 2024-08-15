@@ -105,10 +105,12 @@
 .inputContainer span {
     display: block; /* Ensure the span takes up space */
     margin-top: 5px; /* Space between the input and error message */
-    font-size: 12px; /* Adjust as needed */
+    font-size: 12px;
+    color: red; /* Adjust as needed */
 }
 
 .inputContainer.error span {
+    border-bottom: 1px solid red;
     color: red; 
 }
 
@@ -117,6 +119,7 @@
 }
 
 .inputContainer.error input {
+    border-bottom: 1px solid red;
     border-color: red; /* Change border color of input */
 }
 
