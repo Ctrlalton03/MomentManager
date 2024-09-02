@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/add_task.css">
+    <title>Add Task</title>
+</head>
+<body>
+    <div id="todolistContainer">
+        <div class="headerArea">
+            <h1><a href="index.html">Moment <br>Manager</a></h1>
+        </div>
+        <div class="header">
+            <h1>To-Do List</h1>
+            <div id="Blueline"></div>
+        </div>
+        <div class="formContainer">
+            <h3>Add New Task Details</h4>
+            <form action="/" method="POST" id="formDetails">
+                <div class="FormInput">
+                    <label for="taskName">Task Title:</label>
+                    <input type="text" id="taskName" name="taskName" required>
+                </div>
+                <div class="FormInput">
+                    <label for="taskDescription">Due Date:</label>
+                    <input type="date" id="dueDate" name="DueDate" >
+                </div>
+                <div class="FormInput">
+                    <label for="taskDescription">Reminder:</label>
+                    <input type="datetime-local" id="Reminder" name="Reminder" >
+                </div>
+                <div class="PriorityFormInput">
+                    <label for="taskDescription">Priority Level:</label>
+                    <div class="priority-options">
+                        <button type="button" class="priority-button" id="priority1" data-priority="Low">Low</button>
+                        <button type="button" class="priority-button" id="priority2" data-priority="Medium">Medium</button>
+                        <button type="button" class="priority-button" id="priority3" data-priority="High">High</button>
+                    </div>
+
+                    <input type="hidden" id="priority" name="priority" value="Low">
+
+                </div>
+                <div class="FormInput">
+                    <label for="taskDescription">Task Description:</label>
+                    <input type="text" id="taskDescription" name="taskDescription" required>
+                </div>
+                <button type="submit" id="SaveBtn">Save Task</button>
+            </form>
+    </div>
+
+    <script src="./js/add_task.js"></script>
+</body>
+</html>
