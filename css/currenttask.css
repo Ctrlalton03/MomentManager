@@ -140,7 +140,6 @@
 .CurrentTaskContainer{
     width: 90%;
     height: 30%;
-    border: 1px solid red;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -149,7 +148,7 @@
     
 }
 .CurrentTaskContainer h1{
-    font-family: 'raleway-italic';
+    font-family: 'raleway';
     color: #ffffff;
     font-size: 26px;
     margin-top: 10px;
