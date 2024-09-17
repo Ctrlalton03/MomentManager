@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/add_task.css">
+    <title>EditForm</title>
+</head>
+<body>
+    <div id="todolistContainer"></div>
+        <div class="headerArea">
+            <h1><a href="index.html">Moment <br>Manager</a></h1>
+        </div>
+        <div class="header">
+            <h1>To-Do List</h1>
+            <div id="Blueline"></div>
+        </div>
+        <div class="formContainer">
+            <h3>Edit Task Details</h4>
+            <form action="/" method="POST" id="formDetails">
+                <div class="FormInput">
+                    <label for="taskName">Task Title:</label>
+                    <input type="text" id="taskName" name="taskName" required>
+                </div>
+                <div class="FormInput">
+                    <label for="taskDescription">Due Date:</label>
+                    <input type="date" id="dueDate" name="DueDate" >
+                </div>
+                <div class="FormInput">
+                    <label for="taskDescription">Reminder:</label>
+                    <input type="datetime-local" id="Reminder" name="Reminder" >
+                </div>
+                <div class="PriorityFormInput">
+                    <label for="taskDescription">Priority Level:</label>
+                    <div class="priority-options">
+                        <button type="button" class="priority-button" id="priority1" data-priority="Low">Low</button>
+                        <button type="button" class="priority-button" id="priority2" data-priority="Medium">Medium</button>
+                        <button type="button" class="priority-button" id="priority3" data-priority="High">High</button>
+                    </div>
+
+                    <input type="hidden" id="priority" name="priority" value="Low">
+
+                </div>
+                <div class="FormInput">
+                    <label for="taskDescription">Task Description:</label>
+                    <input type="text" id="taskDescription" name="taskDescription" required>
+                </div>
+                <button type="submit" id="SaveBtn">Save Task</button>
+            </form>
+    </div>
+    <script>
+            const prioritySelector = document.querySelectorAll('.priority-button');
+
+        document.addEventListener('DOMContentLoaded', function(){
+            const urlParams = new URLSearchParams(window.location.search);
+            const taskId = urlParams.get('taskId');
+
+            if (taskId){
+                const tasks = JSON.parse(localStorage.getItem('Task')) || [];
+                
+
+                const task = tasks.find(task => String(task.id) === String(taskId));
+                
+
+                if (task){
+                    document.getElementById('taskName').value = task.title || '';
+                    document.getElementById('dueDate').value = task.dueDate || '';
+                    document.getElementById('Reminder').value = task.reminder || '';
+                    document.getElementById('taskDescription').value = task.description || '';
+                    document.getElementById('priority').value = task.priority || 'Low';
+                    
+                    document.querySelectorAll('.priority-button').forEach(button => {
+                        if (button.getAttribute('data-priority') === task.priority) {
+                            button.classList.add('selected');
+                        }
+                    });
+                }
+
+            
+            }
+
+            document.querySelectorAll('.priority-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove selected class from all buttons
+                    document.querySelectorAll('.priority-button').forEach(btn => btn.classList.remove('selected'));
+                    // Add selected class to the clicked button
+                    button.classList.add('selected');
+                    // Update the hidden input value
+                    document.getElementById('priority').value = button.getAttribute('data-priority');
+                });
+            });
+            
+            document.getElementById('formDetails').addEventListener('submit', function(event){
+                event.preventDefault();
+                const title = document.getElementById('taskName').value;
+                const dueDate = document.getElementById('dueDate').value;
+                const reminder = document.getElementById('Reminder').value;
+                const priority = document.getElementById('priority').value;
+                const description = document.getElementById('taskDescription').value;
+
+                let tasks = JSON.parse(localStorage.getItem('Task')) || [];
+                const taskIndex = tasks.findIndex(task => String(task.id) === String(taskId));
+
+                if (taskIndex !== -1){
+                    tasks[taskIndex] = {
+                        ...tasks[taskIndex],
+                        title,
+                        dueDate,
+                        reminder,
+                        priority,
+                        description
+                    };
+                    localStorage.setItem('Task', JSON.stringify(tasks));
+                    
+                }
+
+                window.location.href = 'currenttask.html';
+            });
+        });
+    </script>
+</body>
+</html>
